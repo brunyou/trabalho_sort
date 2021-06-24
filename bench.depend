@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1624416307 source:c:\users\bruno\documents\codigos\bench\main.cpp
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<locale.h>
+	"bibli.h"
+	"home.h"
+
+1624413614 c:\users\bruno\documents\codigos\bench\bibli.h
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<locale.h>
+	<iostream>
+
+1624418864 c:\users\bruno\documents\codigos\bench\home.h
+	"stdlib.h"
+
