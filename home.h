@@ -17,7 +17,7 @@ int menu(){
   cout << "\n 1) Bubble Sort | 2) Selection Sort | 3) Insertion Sort | 4) Quick Sort | 5) Merge Sort " << endl;
   cout << " R: ";
   cin >> opcao;
-  return opção;
+  return opcao;
 };
 
 int opcao(int op){
