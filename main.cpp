@@ -9,21 +9,24 @@
 
 using namespace std;
 
-int tam;
+
+
 int main(){
-    setlocale(LC_ALL,"Portuguese");
-    switch(menu())
+setlocale(LC_ALL,"Portuguese");
+int tam;
+
+switch(menu())
     {
 case 1:
-    cin >> tam;
-    ordBS(tam);
-    break;
+cin >> tam;
+ordBS(tam);
+break;
 case 2:
-    cin >> tam;
-    ordSS(tam);
-    break;
-    }
-  //ordBS(100);
+cin >> tam;
+ordSS(tam);
+break;
+}
+
 
     return 0;
 }
