@@ -20,11 +20,13 @@ int menu(){
 switch(op){
 case 1:
     cout << "\n benchBruno: Bubble Sort? Boa escolha! Agora escolha o tamanho do arquivo:"<< endl;
-    cout << " R: ";
+    selTam();
+    cout << "\n R: ";
     break;
 case 2:
     cout << "\n benchBruno: Selection sort... Ok. Então, diga-me qual o tamanho do arquivo?"<< endl;
-    cout << " R: ";
+    selTam();
+    cout << "\n R: ";
     break;
 case 3:
     cout << "\n benchBruno: Você escolheu Selection Sort, por favor escolha o tamanho do arquivo"<< endl;

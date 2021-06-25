@@ -17,6 +17,11 @@ int main(){
 case 1:
     cin >> tam;
     ordBS(tam);
+    break;
+case 2:
+    cin >> tam;
+    ordSS(tam);
+    break;
     }
   //ordBS(100);
 
