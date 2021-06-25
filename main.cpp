@@ -9,11 +9,16 @@
 
 using namespace std;
 
-
+int tam;
 int main(){
-    //setlocale(LC_ALL,"Portuguese");
-    //opcao(menu());
-  ordBS(10);
+    setlocale(LC_ALL,"Portuguese");
+    switch(menu())
+    {
+case 1:
+    cin >> tam;
+    ordBS(tam);
+    }
+  //ordBS(100);
 
     return 0;
 }
