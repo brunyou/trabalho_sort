@@ -11,9 +11,9 @@ using namespace std;
 
 
 int main(){
-    setlocale(LC_ALL,"Portuguese");
-    opcao(menu());
-    gerarArqP(100);
+    //setlocale(LC_ALL,"Portuguese");
+    //opcao(menu());
+  ordBS(10);
 
     return 0;
 }

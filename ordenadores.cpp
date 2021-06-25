@@ -4,7 +4,7 @@
 #include <stdio>
 
 //=============BUBBLE SORT===============
-void bubblesort(int contador, int TAM){
+/*void bubblesort(int contador, int TAM){
  for (contador = 1; contador < TAM; contador++) {
    for (i = 0; i < TAM - 1; i++) {
      if (numeros[i] > numeros[i + 1]) {
@@ -14,7 +14,7 @@ void bubblesort(int contador, int TAM){
      }
    }
  }
-
+*/
 //=============SELECTION SORT=============
 
 void selection_sort (int vetor[],int max) {

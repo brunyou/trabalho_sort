@@ -18,3 +18,25 @@
 1624418864 c:\users\bruno\documents\codigos\bench\home.h
 	"stdlib.h"
 
+1624580931 source:c:\users\bruno\documents\trabalho_sort\main.cpp
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<locale.h>
+	"bibli.h"
+	"home.h"
+	"ordenadores.h"
+
+1624580931 c:\users\bruno\documents\trabalho_sort\bibli.h
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<locale.h>
+	<iostream>
+
+1624577247 c:\users\bruno\documents\trabalho_sort\home.h
+	"stdlib.h"
+
+1624577761 c:\users\bruno\documents\trabalho_sort\ordenadores.h
+
