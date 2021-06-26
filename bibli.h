@@ -89,4 +89,33 @@ for (int i = 0 ;i< tam-1; i++)
     }
 }
 
+void ordIS(int tam){
+int dados[tam];
+ cout << "\n Desordenado : ---------------------------------" <<endl;
+    for(int i = 0; i<tam; i++)
+    {
+    dados[i] = rand() % tam;
+    cout << " | " << dados[i];
+    }
+
+for (int i = 1; i < tam; i++)
+{
+int escolhido = dados[i];
+int j = i - 1;
+
+while ((j >= 0) && (dados[j] > escolhido)) {
+        dados[j + 1] = dados[j];
+        j--;
+    }
+
+    dados[j + 1] = escolhido;
+}
+cout << "\n Ordenado : ---------------------------------" <<endl;
+    for(int i = 0; i<tam; i++)
+    {
+        cout << " | " << dados[i];
+    }
+}
+
+
 #endif // BIBLI_H_INCLUDED

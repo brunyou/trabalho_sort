@@ -18,13 +18,18 @@ int tam;
 switch(menu())
     {
 case 1:
-cin >> tam;
-ordBS(tam);
+    cin >> tam;
+    ordBS(tam);
 break;
+
 case 2:
-cin >> tam;
-ordSS(tam);
+    cin >> tam;
+    ordSS(tam);
 break;
+
+case 3:
+    cin >> tam;
+    ordIS(tam);
 }
 
 

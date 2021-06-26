@@ -30,7 +30,8 @@ case 2:
     break;
 case 3:
     cout << "\n benchBruno: Você escolheu Selection Sort, por favor escolha o tamanho do arquivo"<< endl;
-    cout << " R: ";
+    selTam();
+    cout << "\n R: ";
     break;
 case 4:
     cout << "\n benchBruno: Quick Sort? Interessante ... então agora me diga, qual o tamanho do arquivo?"<< endl;
