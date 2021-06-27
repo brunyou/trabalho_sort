@@ -41,8 +41,8 @@ case 5:
     cin>> tam;
     ordMS(tam);
 
-//default:
-    //cout << "\n benchBruno: Este número não pode ser selecionado!" << endl;
+default:
+cout << "\n benchBruno: Este número não pode ser selecionado!" << endl;
 
 }
 

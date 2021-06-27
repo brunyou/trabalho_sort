@@ -99,7 +99,7 @@ int dados[tam];
     dados[i] = rand() % tam;
     cout << " | " << dados[i];
     }
-
+t_ini = time(NULL);
 for (int i = 1; i < tam; i++)
 {
 int escolhido = dados[i];
@@ -112,11 +112,14 @@ while ((j >= 0) && (dados[j] > escolhido)) {
 
     dados[j + 1] = escolhido;
 }
+t_fim = time(NULL);
+tempo = difftime(t_fim, t_ini);
 cout << "\n Ordenado : ---------------------------------" <<endl;
     for(int i = 0; i<tam; i++)
     {
         cout << " | " << dados[i];
     }
+    cout << "\n benchBruno: O tempo de execução dessa ordenação foi de: " << tempo << " segundos!";
 }
 
 //**QUICK SORT**
@@ -158,13 +161,16 @@ int dados[tam];
     dados[i] = rand() % tam;
     cout << " | " << dados[i];
     }
+t_ini = time(NULL);
 quickSort(dados, tam-tam, tam-1);
-
+t_fim = time(NULL);
+tempo = difftime(t_fim, t_ini);
     cout << "\n Ordenado : ---------------------------------" <<endl;
     for(int i = 0; i<tam; i++)
     {
     cout << " | " << dados[i];
     }
+cout << "\n benchBruno: O tempo de execução dessa ordenação foi de: " << tempo << " segundos!";
 }
 
 //*MERGE SORT**
@@ -215,12 +221,15 @@ void ordMS(int tam){
     dados[i] = rand() % tam;
     cout << " | " << dados[i];
     }
+t_ini = time(NULL);
 mergeSort(dados, tam-tam, tam-1);
+t_fim = time(NULL);
      cout << "\n Ordenado : ---------------------------------" <<endl;
     for(int i = 0; i<tam; i++)
     {
     cout << " | " << dados[i];
     }
+    tempo = difftime(t_fim, t_ini);
+cout << "\n benchBruno: O tempo de execução dessa ordenação foi de: " << tempo << " segundos!";
 }
-
 #endif // BIBLI_H_INCLUDED
