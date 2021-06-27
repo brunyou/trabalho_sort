@@ -1,6 +1,7 @@
 #ifndef HOME_H_INCLUDED
 #define HOME_H_INCLUDED
 #include "stdlib.h"
+#include "bibli.h"
 using namespace std;
 
 int menu(){

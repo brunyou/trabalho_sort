@@ -30,6 +30,16 @@ break;
 case 3:
     cin >> tam;
     ordIS(tam);
+break;
+
+case 4:
+    cin >> tam;
+    ordQS(tam);
+break;
+
+default:
+    cout << "\n benchBruno: Este número não pode ser selecionado!" << endl;
+
 }
 
 

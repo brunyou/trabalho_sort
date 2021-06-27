@@ -8,7 +8,7 @@
 #include <iostream>
 
 using namespace std;
-
+int tam;
 void selTam(){
 
 cout << "\n    PEQUENO: 10 a 100 de dados.";
@@ -88,7 +88,7 @@ for (int i = 0 ;i< tam-1; i++)
     cout << " | " << dados[i];
     }
 }
-
+//**INSERTION SORT**
 void ordIS(int tam){
 int dados[tam];
  cout << "\n Desordenado : ---------------------------------" <<endl;
@@ -116,6 +116,56 @@ cout << "\n Ordenado : ---------------------------------" <<endl;
         cout << " | " << dados[i];
     }
 }
+
+//**QUICK SORT**
+int particiona(int *vetor, int menor, int maior){
+    int pivo = vetor[menor];
+    int i, j;
+    i = menor;
+    j = maior;
+    int aux;
+    while(i <= j){
+        while(vetor[i] <= pivo) if(i <= j)i++;else break;   //Para não sair do vetor
+        while(vetor[j] > pivo)  if(j >= i)j--;else break;   //Para não sair do vetor
+        if(i <= j){
+            aux = vetor[i];
+            vetor[i] = vetor[j];
+            vetor[j] = aux;
+            i++; j--;
+        }
+    }
+    vetor[menor] = vetor[j];
+    vetor[j] = pivo;
+    return j;
+}
+
+void quickSort(int *V,int inicio, int fim){
+int pivo;
+if (fim > inicio){
+    pivo = particiona(V,inicio,fim);
+    quickSort(V, inicio, pivo-1);
+    quickSort(V, pivo+1, fim);
+    }
+}
+
+void ordQS(int tam){
+int dados[tam];
+ cout << "\n Desordenado : ---------------------------------" <<endl;
+    for(int i = 0; i<tam; i++)
+    {
+    dados[i] = rand() % tam;
+    cout << " | " << dados[i];
+    }
+quickSort(dados, tam-tam, tam-1);
+
+    cout << "\n Ordenado : ---------------------------------" <<endl;
+    for(int i = 0; i<tam; i++)
+    {
+    cout << " | " << dados[i];
+    }
+}
+
+
 
 
 #endif // BIBLI_H_INCLUDED
