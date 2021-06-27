@@ -3,6 +3,14 @@
 #include "stdlib.h"
 #include "bibli.h"
 using namespace std;
+void selTam(){
+
+cout << "\n    PEQUENO: 10 a 100 de dados.";
+cout << "\n    MÉDIO..: 1.000 a 50.000 de dados.";
+cout << "\n    GRANDE.: 100.000 a 500.000 de dados.";
+cout << "\n    MASSIVO: 10.000.000 a 50.000.000 de dados." << endl;
+cout << "\n benchBruno: Fique tranquilo, os dados são números aleatórios gerados via código, você não irá ter que digitá-los";
+}
 
 int menu(){
     int op;
@@ -36,7 +44,8 @@ case 3:
     break;
 case 4:
     cout << "\n benchBruno: Quick Sort? Interessante ... então agora me diga, qual o tamanho do arquivo?"<< endl;
-    cout << " R: ";
+    selTam();
+    cout << "\n R: ";
     break;
 case 5:
     cout << "\n benchBruno: Merge Sort!? Ok, qual o tamanho do arquivo?"<< endl;

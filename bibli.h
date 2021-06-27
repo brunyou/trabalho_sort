@@ -6,20 +6,15 @@
 #include <time.h>
 #include <locale.h>
 #include <iostream>
-
+#include <tgmath.h>
 using namespace std;
 int tam;
-void selTam(){
-
-cout << "\n    PEQUENO: 10 a 100 de dados.";
-cout << "\n    MÉDIO..: 1.000 a 50.000 de dados.";
-cout << "\n    GRANDE.: 100.000 a 500.000 de dados.";
-cout << "\n    MASSIVO: 10.000.000 a 50.000.000 de dados.";
-cout << "\n benchBruno: Fique tranquilo, os dados são números aleatórios gerados via código, você não irá ter que digitá-los";
-}
+float tempo;
+time_t t_ini, t_fim;
 
 //**BUBBLE SORT**
 void ordBS(int tam){
+
 int dados[tam];
 int troca;
 int aux;
@@ -31,7 +26,7 @@ int aux;
     cout << " | " << dados[i];
 
     }
-
+t_ini = time(NULL);
 troca = 1;
 while (troca == 1)
 {
@@ -49,12 +44,14 @@ while (troca == 1)
     }
 
 }
+t_fim = time(NULL);
+tempo = difftime(t_fim, t_ini);
     cout << "\n Ordenado : ---------------------------------" <<endl;
     for(int i = 0; i<tam; i++)
     {
     cout << " | " << dados[i];
     }
-
+cout << "\n benchBruno: O tempo de execução dessa ordenação foi de: " << tempo << " segundos!";
 }
 
 //**SELECTION SORT**
@@ -68,6 +65,7 @@ for(int i = 0; i<tam; i++)
     dados[i] = rand() % tam;
     cout << " | " << dados[i];
 }
+t_ini = time(NULL);
 for (int i = 0 ;i< tam-1; i++)
     {
          int min = i;
@@ -82,11 +80,15 @@ for (int i = 0 ;i< tam-1; i++)
          dados[min] = dados[i];
          dados[i] = temp;
     }
+    t_fim = time(NULL);
+    tempo = difftime(t_fim, t_ini);
+
     cout << "\n Ordenado : ---------------------------------" <<endl;
     for(int i = 0; i<tam; i++)
     {
     cout << " | " << dados[i];
     }
+    cout << "\n benchBruno: O tempo de execução dessa ordenação foi de: " << tempo << " segundos!";
 }
 //**INSERTION SORT**
 void ordIS(int tam){
@@ -165,7 +167,60 @@ quickSort(dados, tam-tam, tam-1);
     }
 }
 
+//*MERGE SORT**
+void merge(int *V, int inicio, int meio, int fim){
+    int *temp, p1, p2, tamanho, i, j, k;
+    int fim1 = 0, fim2 = 0;
+    tamanho = fim - inicio+1;
+    p1 = inicio;
+    p2 = meio+1;
+    temp = (int *) malloc(tamanho*sizeof(int));
+    if(temp != NULL){
+        for(i=0; i< tamanho; i++){
+            if(!fim1 && !fim2){
+                if(V[p1] < V[p2])
+                    temp [i] = V[p1++];
+                else
+                    temp[i] = V[p2++];
+                if(p1>meio) fim1=1;
+                if(p2>fim) fim2=1;
+                }else{
+                    if(!fim1)
+                        temp[i]=V[p1++];
+                    else
+                        temp[i]=V[p2++];
+                    }
+        }
+        for(j=0, k=inicio; j<tamanho; j++, k++)
+            V[k]=temp[j];
+    }
+    free(temp);
+}
 
+void mergeSort (int *V, int inicio, int fim){
+    int meio;
+    if(inicio < fim){
+        meio = floor((inicio+fim)/2);
+        mergeSort(V,inicio,meio);
+        mergeSort(V,meio+1,fim);
+        merge(V,inicio,meio,fim);
+    }
+}
 
+void ordMS(int tam){
+    int dados[tam];
+ cout << "\n Desordenado : ---------------------------------" <<endl;
+    for(int i = 0; i<tam; i++)
+    {
+    dados[i] = rand() % tam;
+    cout << " | " << dados[i];
+    }
+mergeSort(dados, tam-tam, tam-1);
+     cout << "\n Ordenado : ---------------------------------" <<endl;
+    for(int i = 0; i<tam; i++)
+    {
+    cout << " | " << dados[i];
+    }
+}
 
 #endif // BIBLI_H_INCLUDED

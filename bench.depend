@@ -18,7 +18,7 @@
 1624418864 c:\users\bruno\documents\codigos\bench\home.h
 	"stdlib.h"
 
-1624815269 source:c:\users\bruno\documents\trabalho_sort\main.cpp
+1624820254 source:c:\users\bruno\documents\trabalho_sort\main.cpp
 	<iostream>
 	<stdlib.h>
 	<stdio.h>
@@ -28,14 +28,15 @@
 	"home.h"
 	"ordenadores.h"
 
-1624816649 c:\users\bruno\documents\trabalho_sort\bibli.h
+1624822327 c:\users\bruno\documents\trabalho_sort\bibli.h
 	<stdlib.h>
 	<stdio.h>
 	<time.h>
 	<locale.h>
 	<iostream>
+	<tgmath.h>
 
-1624809634 c:\users\bruno\documents\trabalho_sort\home.h
+1624817816 c:\users\bruno\documents\trabalho_sort\home.h
 	"stdlib.h"
 	"bibli.h"
 
